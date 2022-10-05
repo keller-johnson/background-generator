@@ -29,3 +29,5 @@ function randomColors() {
 color1.addEventListener("input", colorPicker);
 color2.addEventListener("input", colorPicker);
 random.addEventListener("click", randomColors);
+
+// lets figure out a way to change in the input colors when we click the random BG colors
