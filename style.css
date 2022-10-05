@@ -1,0 +1,7 @@
+* {
+  font-family: monospace;
+}
+
+#gradient {
+  background: linear-gradient(to right, #562cba, #db0a7a);
+}
