@@ -4,4 +4,15 @@
 
 #gradient {
   background: linear-gradient(to right, #562cba, #db0a7a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+}
+
+section {
+  background: rgba(18, 18, 18, 0.8);
+  padding: 3rem;
+  border-radius: 1rem;
+  color: #fff;
 }
