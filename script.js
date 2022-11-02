@@ -1,24 +1,19 @@
-var _ = require("lodash");
-console.log(_);
-var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log("answer:", _.without(array, 3));
+let css = document.querySelector("h3");
+let color1 = document.querySelector(".color1");
+let color2 = document.querySelector(".color2");
+let body = document.getElementById("gradient");
+let random = document.querySelector(".random");
 
-var css = document.querySelector("h3");
-var color1 = document.querySelector(".color1");
-var color2 = document.querySelector(".color2");
-var body = document.getElementById("gradient");
-var random = document.querySelector(".random");
-
-function colorPicker() {
+colorPicker = () => {
   body.style.background =
     "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 
   css.textContent = body.style.background + ";";
-}
+};
 
-function randomColors() {
-  var randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
-  var randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
+randomColors = () => {
+  let randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
+  let randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
   body.style.background =
     "linear-gradient(to right, " +
     "#" +
@@ -29,7 +24,13 @@ function randomColors() {
     ")";
 
   css.textContent = body.style.background + ";";
-}
+
+  //replace color1 and color2 with randomColor1 & 2;
+  let changeColor1 = document.querySelector(".color1");
+  let changeColor2 = document.querySelector(".color2");
+  changeColor1.setAttribute("value", `#${randomColor1}`);
+  changeColor2.setAttribute("value", `#${randomColor2}`);
+};
 
 color1.addEventListener("input", colorPicker);
 color2.addEventListener("input", colorPicker);

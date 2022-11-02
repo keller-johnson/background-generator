@@ -15,4 +15,5 @@ section {
   padding: 3rem;
   border-radius: 1rem;
   color: #fff;
+  min-width: 600px;
 }
